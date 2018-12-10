@@ -8,58 +8,60 @@ class Home extends StatelessWidget {
       color: Colors.deepOrangeAccent,
       padding: EdgeInsets.all(50.0),
       child: Center(
-          child: Column(
+          child: SingleChildScrollView(
+            child: Column(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Text("Margherita",
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: Text("Margherita",
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            decoration: TextDecoration.none,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400))),
+                Expanded(
+                  child: Text("Tomato, Mozarella cheese, Basil",
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
                           decoration: TextDecoration.none,
                           fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400))),
-              Expanded(
-                child: Text("Tomato, Mozarella cheese, Basil",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Nunito',
-                        fontWeight: FontWeight.w400)),
-              )
-            ],
-          ),
-          Row(
-            children: <Widget>[
-              Expanded(
-                  child: Text("Marinara",
+                          fontWeight: FontWeight.w400)),
+                )
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                    child: Text("Marinara",
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30,
+                            decoration: TextDecoration.none,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400))),
+                Expanded(
+                  child: Text("Tomato, Garlic",
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 30,
                           decoration: TextDecoration.none,
                           fontFamily: 'Nunito',
-                          fontWeight: FontWeight.w400))),
-              Expanded(
-                child: Text("Tomato, Garlic",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                        decoration: TextDecoration.none,
-                        fontFamily: 'Nunito',
-                        fontWeight: FontWeight.w400)),
-              )
-            ],
-          ),
-          PizzaImageWidget(),
-          OrderButton(),
+                          fontWeight: FontWeight.w400)),
+                )
+              ],
+            ),
+            PizzaImageWidget(),
+            OrderButton(),
         ],
-      )),
+      ),
+          )),
     );
   }
 }
